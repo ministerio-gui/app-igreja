@@ -1,0 +1,19 @@
+{
+  "enableAllProjectMcpServers": true,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp__supabase__execute_sql|mcp__supabase__apply_migration",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -File \"C:\\Users\\PC Gamer\\Desktop\\Projetos-Reais\\Igreja-missao\\.claude\\save-migration.ps1\"",
+            "timeout": 15,
+            "statusMessage": "Salvando migration no histórico..."
+          }
+        ]
+      }
+    ]
+  }
+}

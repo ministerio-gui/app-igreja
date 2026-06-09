@@ -7,9 +7,9 @@
 ## STATUS GERAL DO PROJETO
 
 ```
-Fase atual:     🔧 Setup & Fundação
-Última atualização: [DATA]
-Progresso:      ░░░░░░░░░░ 0%
+Fase atual:     🚀 Sprint 2 — Home Dashboard + Calendário
+Última atualização: 2026-06-09
+Progresso:      ██░░░░░░░░ 18%
 ```
 
 ### Legenda de status
@@ -38,28 +38,33 @@ Eliminar planilhas, grupos de WhatsApp e anotações soltas. Centralizar calend�
 ## 2. MÓDULOS E FEATURES
 
 ### 2.1 🔐 AUTENTICAÇÃO
-**Status:** 🔴 Não iniciado
+**Status:** 🟢 Concluído
 
 | Feature | Descrição | Status |
 |---|---|---|
-| Login email/senha | Tela de login sem validação por enquanto | 🔴 |
-| Recuperação de senha | Reset via email Supabase ainda não obrigatório | 🔴 |
-| Sessão persistente | Auto-login no PWA | 🔴 |
-| Perfil do usuário | Avatar (caso exista) + nome + role (caso exista) | 🔴 |
-| Rotas protegidas | Redirect para login se não autenticado (quando auth estiver implementado) | 🔴 |
-| Logout | Limpa sessão e redireciona | 🔴 |
+| Login email/senha | Tela de login fiel ao protótipo, com show/hide senha | 🟢 |
+| Recuperação de senha | Link "Esqueci minha senha" presente (fluxo Supabase pendente) | 🟡 |
+| Sessão persistente | Auto-login via `supabase.auth.getSession()` + `onAuthStateChange` | 🟢 |
+| Perfil do usuário | Hook `useProfile` + tabela `profiles` com role admin/leader | 🟢 |
+| Rotas protegidas | `RequireAuth` component — redireciona para /login sem sessão | 🟢 |
+| Logout | `signOut()` limpa sessão e redireciona | 🟢 |
 
 **Critérios de aceite:**
-- [ ] Login funcional com email e senha válidos (quando auth estiver implementado)
-- [ ] Erro claro em credenciais inválidas (toast) (quando auth estiver implementado)
-- [ ] Sessão persiste após fechar o app (quando auth estiver implementado)
-- [ ] Recuperação de senha envia email (quando auth estiver implementado)
-- [ ] Acesso negado a rotas sem autenticação (quando auth estiver implementado)
+- [x] Login funcional com email e senha válidos
+- [x] Erro claro em credenciais inválidas
+- [x] Sessão persiste após fechar o app
+- [ ] Recuperação de senha envia email *(pendente — baixa prioridade)*
+- [x] Acesso negado a rotas sem autenticação
+
+**Notas de implementação:**
+- Trigger `handle_new_user` corrigido com `SET search_path = public` e `public.profiles` explícito
+- Primeiro usuário admin criado via API REST + SQL `UPDATE profiles SET role = 'admin'`
+- Supabase project: `qbakicreipawgejhdiuw.supabase.co`
 
 ---
 
 ### 2.2 🏠 HOME / DASHBOARD
-**Status:** 🔴 Não iniciado
+**Status:** 🟡 Em progresso
 
 | Feature | Descrição | Status |
 |---|---|---|
@@ -214,22 +219,23 @@ Eliminar planilhas, grupos de WhatsApp e anotações soltas. Centralizar calend�
 ## 3. ORDEM DE DESENVOLVIMENTO RECOMENDADA
 
 ```
-SPRINT 1 — Fundação (Setup + Auth)
-├── Setup Supabase (schema SQL completo)
-├── Setup Antigravity (estrutura de pastas)
-├── Design tokens (variáveis CSS do DESIGN.md)
-├── AppShell (Sidebar + BottomNav + roteamento)
-└── Autenticação completa
+SPRINT 1 — Fundação (Setup + Auth)                          ✅ CONCLUÍDO
+├── ✅ Setup Supabase (4 migrations + seed)
+├── ✅ Setup projeto (Vite + React 18 + TS + Tailwind)
+├── ✅ Design tokens (CSS custom properties)
+├── ✅ AppShell (BottomNav + roteamento protegido)
+├── ✅ Autenticação completa (login, sessão, perfil, rotas)
+└── ✅ MCP Supabase configurado + hook auto-migration
 
-SPRINT 2 — Core (Home + Calendário)
-├── Home Dashboard
-└── Calendário (3 views + CRUD)
+SPRINT 2 — Core (Home + Calendário)                         🟡 EM ANDAMENTO
+├── 🟡 Home Dashboard (estrutura criada, visual pendente)
+└── 🔴 Calendário (3 views + CRUD)
 
-SPRINT 3 — Operacional (Cantina + Ausências)
+SPRINT 3 — Operacional (Cantina + Ausências)                🔴 Não iniciado
 ├── Cantina completa (Dashboard + Produtos + Histórico)
 └── Ausências completa
 
-SPRINT 4 — Complementar (Notas + Config + PWA)
+SPRINT 4 — Complementar (Notas + Config + PWA)              🔴 Não iniciado
 ├── Notas
 ├── Configurações / Perfil
 └── PWA + polish final
@@ -255,6 +261,8 @@ SPRINT 4 — Complementar (Notas + Config + PWA)
 | Data | Versão | O que mudou |
 |---|---|---|
 | — | v0.1 | PRD inicial criado |
+| 2026-06-09 | v0.2 | Sprint 1 concluído — scaffold, Supabase, auth, AppShell, MCP |
+| 2026-06-09 | v0.3 | LoginPage visual fiel ao protótipo (Navy + Cream, blobs, show/hide senha) |
 
 ---
 

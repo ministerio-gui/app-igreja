@@ -62,11 +62,13 @@
   --color-cream: #1B2A4A;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 html {
@@ -89,6 +91,11 @@ body {
 
 /* Touch scrolling */
 .scroll-touch { -webkit-overflow-scrolling: touch; }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
