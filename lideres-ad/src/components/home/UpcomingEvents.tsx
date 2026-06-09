@@ -9,7 +9,7 @@ import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { useEvents } from '@/hooks/useEvents'
 import { EventCardSkeleton } from '@/components/ui/Skeleton'
-import { staggerContainer, cardVariants, transition } from '@/lib/animations'
+import { staggerContainer, cardVariants } from '@/lib/animations'
 import type { Event } from '@/types'
 
 // ─── Event card ───────────────────────────────────────────────────────────────
