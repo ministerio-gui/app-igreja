@@ -1,5 +1,7 @@
 {
+  "buildCommand": "cd lideres-ad && npm install && npm run build",
+  "outputDirectory": "lideres-ad/dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
