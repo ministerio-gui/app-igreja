@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#262a33",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary-fixed": "#0a1a3a",
+                        "on-primary-fixed-variant": "#134393",
+                        "tertiary": "#cbc6bb",
+                        "outline-variant": "#434651",
+                        "surface-container": "#1c2028",
+                        "surface-container-highest": "#31353e",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "on-surface": "#dfe2ee",
+                        "tertiary-fixed": "#e8e2d6",
+                        "inverse-on-surface": "#2c3039",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "on-primary-fixed": "#001945",
+                        "on-background": "#dfe2ee",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface-variant": "#c3c6d3",
+                        "on-tertiary": "#333028",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#335bac",
+                        "on-secondary-fixed-variant": "#384668",
+                        "background": "#090D15",
+                        "inverse-surface": "#dfe2ee",
+                        "surface": "#111827",
+                        "primary": "#4C72C4",
+                        "surface-container-lowest": "#0a0e16",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "secondary-fixed-dim": "#b7c6ee",
+                        "secondary": "#7A8BA8",
+                        "on-secondary-container": "#a6b5dc",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#d9e2ff",
+                        "outline": "#8d909d",
+                        "surface-dim": "#0f131c",
+                        "primary-container": "#4c72c4",
+                        "error-container": "#93000a",
+                        "secondary-container": "#384668",
+                        "surface-container-low": "#181c24",
+                        "on-primary-container": "#fefbff",
+                        "on-primary": "#002d6e",
+                        "surface-bright": "#353942",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1d1c14",
+                        "surface-tint": "#b0c6ff",
+                        "surface-variant": "#31353e",
+                        "on-secondary": "#213050",
+                        "tertiary-container": "#78746a",
+                        "navy-ad": "#1B2A4A",
+                        "cream-ad": "#EEE8DC",
+                        "success-ad": "#22D3A0",
+                        "danger-ad": "#F05252",
+                        "muted-ad": "#3D506B"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "md-ad": "14px",
+                        "card-ad": "16px"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono-text { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chart-gradient-green {
+            background: linear-gradient(180deg, rgba(34, 211, 160, 0.15) 0%, rgba(34, 211, 160, 0) 100%);
+        }
+        .chart-gradient-red {
+            background: linear-gradient(180deg, rgba(240, 82, 82, 0.15) 0%, rgba(240, 82, 82, 0) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col items-center">
+<div class="w-full max-w-[390px] min-h-[844px] bg-background flex flex-col relative overflow-hidden pb-24">
+<header class="bg-[#090D15] dark:bg-[#090D15] border-b border-[#FFFFFF07] flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-navy-ad flex items-center justify-center overflow-hidden border border-[#FFFFFF12]">
+<img alt="Foto do Líder" class="w-full h-full object-cover" data-alt="portrait of a confident young man smiling with soft studio lighting and dark navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx7NS_rM0FRmy5N1uCVK5FWkwsIpKaJzelommJfvXggZRm4X0q5lhyfsqLYHKNK-9cU5LoVY-BU4Ln1XSXwhPS6f_e2FnL1Mx9RV-TkbHN9hiH1VG78q3VPKpb3uAkAQ4Kqph4Em471ip48CCUVeVvLzLJSB4wCgpGYOoWAIt7q8aEee0CfmW3ijfYw4DekxDzfprkv-faMp7FTEBZr1Mg02tyyF9UCEwL2EVanQDTUmoXR8AeqYMCTLL0pfwR2R_2QA0QI7PEe0Y"/>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#EEE8DC] text-xl font-extrabold text-[#EEE8DC] tracking-tight">Cantina</h1>
+</div>
+<button class="material-symbols-outlined text-[#7A8BA8] hover:bg-[#1B2A4A] transition-colors p-2 rounded-full">notifications</button>
+</header>
+<nav class="w-full bg-surface border-b border-white/[0.06] flex px-4 pt-4">
+<div class="flex gap-8">
+<button class="pb-3 text-cream-ad font-semibold text-[14px] border-b-2 border-primary">Dashboard</button>
+<button class="pb-3 text-muted-ad font-medium text-[14px]">Produtos</button>
+<button class="pb-3 text-muted-ad font-medium text-[14px]">Histórico</button>
+</div>
+</nav>
+<main class="flex-1 px-5 pt-6 flex flex-col gap-6">
+<section class="bg-navy-ad rounded-card-ad p-[22px] border border-primary/25 shadow-[0_4px_24px_rgba(76,114,196,0.2)]">
+<p class="font-semibold text-[11px] text-secondary uppercase tracking-[0.1em] mb-2">SALDO ATUAL</p>
+<h2 class="mono-text font-bold text-[48px] text-cream-ad leading-none">R$ 1.247,50</h2>
+<div class="mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-success-ad">trending_up</span>
+<p class="font-normal text-[13px] text-success-ad">R$ 124,75 destinados à igreja</p>
+</div>
+</section>
+<section class="grid grid-cols-3 gap-3">
+<div class="bg-surface border border-white/[0.06] rounded-xl p-3.5 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-muted-ad uppercase tracking-wider">VENDAS</span>
+<span class="mono-text font-semibold text-[18px] text-success-ad">R$ 3.450</span>
+</div>
+<div class="bg-surface border border-white/[0.06] rounded-xl p-3.5 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-muted-ad uppercase tracking-wider">DESPESAS</span>
+<span class="mono-text font-semibold text-[18px] text-danger-ad">R$ 890</span>
+</div>
+<div class="bg-surface border border-white/[0.06] rounded-xl p-3.5 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-muted-ad uppercase tracking-wider">PRODUTOS</span>
+<span class="mono-text font-semibold text-[18px] text-cream-ad">12</span>
+</div>
+</section>
+<section class="bg-surface rounded-md-ad p-4 border border-white/[0.06]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-[13px] font-medium text-secondary">Últimos 14 dias</h3>
+<div class="flex gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-ad"></span>
+<span class="text-[11px] text-secondary font-medium">Entradas</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-danger-ad"></span>
+<span class="text-[11px] text-secondary font-medium">Saídas</span>
+</div>
+</div>
+</div>
+<div class="h-[200px] w-full relative">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 300 150">
+<defs>
+<lineargradient id="grad-green" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#22D3A0" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#22D3A0" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="grad-red" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F05252" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#F05252" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,120 Q50,60 100,90 T200,40 T300,70 V150 H0 Z" fill="url(#grad-green)"></path>
+<path d="M0,120 Q50,60 100,90 T200,40 T300,70" fill="none" stroke="#22D3A0" stroke-width="2.5"></path>
+<path d="M0,140 Q60,130 120,145 T240,110 T300,120 V150 H0 Z" fill="url(#grad-red)"></path>
+<path d="M0,140 Q60,130 120,145 T240,110 T300,120" fill="none" stroke="#F05252" stroke-dasharray="2 2" stroke-width="2"></path>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between px-1">
+<span class="text-[10px] text-muted-ad font-mono">01 SET</span>
+<span class="text-[10px] text-muted-ad font-mono">07 SET</span>
+<span class="text-[10px] text-muted-ad font-mono">14 SET</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-3 gap-3 pt-2">
+<button class="h-[44px] bg-primary text-cream-ad rounded-xl font-semibold text-[13px] flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Venda
+                </button>
+<button class="h-[44px] border border-danger-ad text-danger-ad rounded-xl font-semibold text-[13px] flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+                    Despesa
+                </button>
+<button class="h-[44px] border border-success-ad text-success-ad rounded-xl font-semibold text-[13px] flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+                    Depósito
+                </button>
+</section>
+<section class="mt-2">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-[15px] font-bold text-cream-ad">Ranking de Vendas</h3>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between bg-surface-container-low p-3 rounded-xl border border-white/[0.04]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-navy-ad flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">fastfood</span>
+</div>
+<div>
+<h4 class="text-[14px] font-semibold text-cream-ad">Hambúrguer AD</h4>
+<p class="text-[11px] text-muted-ad uppercase tracking-tight">42 unidades este mês</p>
+</div>
+</div>
+<span class="mono-text font-bold text-success-ad text-[14px]">R$ 840,00</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-3 rounded-xl border border-white/[0.04]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-navy-ad flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_drink</span>
+</div>
+<div>
+<h4 class="text-[14px] font-semibold text-cream-ad">Refrigerante Lata</h4>
+<p class="text-[11px] text-muted-ad uppercase tracking-tight">68 unidades este mês</p>
+</div>
+</div>
+<span class="mono-text font-bold text-success-ad text-[14px]">R$ 408,00</span>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full max-w-[390px] z-50 bg-[#111827] rounded-t-2xl border-t border-[#FFFFFF12] shadow-[0_-4px_16px_rgba(0,0,0,0.55)] flex justify-around items-center h-16 pb-safe px-4">
+<a class="flex flex-col items-center justify-center text-[#7A8BA8] hover:text-[#EEE8DC] transition-all active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7A8BA8] hover:text-[#EEE8DC] transition-all active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Eventos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4C72C4] bg-[#4C72C41A] rounded-xl px-3 py-1 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Cantina</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7A8BA8] hover:text-[#EEE8DC] transition-all active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Perfil</span>
+</a>
+</nav>
+</div>
+</body></html>

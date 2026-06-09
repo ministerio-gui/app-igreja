@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendário - Líderes AD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b0c6ff",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#dfe2ee",
+                        "on-secondary-fixed": "#0a1a3a",
+                        "on-background": "#dfe2ee",
+                        "outline-variant": "#434651",
+                        "on-secondary-container": "#a6b5dc",
+                        "surface-container-low": "#181c24",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "background": "#0f131c",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-high": "#262a33",
+                        "primary-fixed": "#d9e2ff",
+                        "on-surface": "#dfe2ee",
+                        "on-secondary-fixed-variant": "#384668",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "surface": "#0f131c",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-tertiary": "#333028",
+                        "surface-variant": "#31353e",
+                        "secondary": "#b7c6ee",
+                        "primary-container": "#4c72c4",
+                        "on-primary": "#002d6e",
+                        "surface-bright": "#353942",
+                        "inverse-on-surface": "#2c3039",
+                        "surface-container": "#1c2028",
+                        "on-primary-container": "#fefbff",
+                        "secondary-fixed-dim": "#b7c6ee",
+                        "on-tertiary-fixed": "#1d1c14",
+                        "secondary-container": "#384668",
+                        "on-primary-fixed": "#001945",
+                        "surface-tint": "#b0c6ff",
+                        "surface-container-highest": "#31353e",
+                        "tertiary-fixed": "#e8e2d6",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface-dim": "#0f131c",
+                        "outline": "#8d909d",
+                        "on-primary-fixed-variant": "#134393",
+                        "inverse-primary": "#335bac",
+                        "surface-container-lowest": "#0a0e16",
+                        "on-error": "#690005",
+                        "on-secondary": "#213050",
+                        "tertiary-container": "#78746a",
+                        "on-surface-variant": "#c3c6d3",
+                        "error-container": "#93000a",
+                        "tertiary": "#cbc6bb",
+                        "brand-navy": "#1B2A4A",
+                        "brand-cream": "#EEE8DC",
+                        "brand-muted": "#7A8BA8",
+                        "brand-dark-muted": "#3D506B"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Plus Jakarta Sans"],
+                        label: ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #090D15;
+            color: #EEE8DC;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#090D15] border-b border-[#FFFFFF07] shadow-sm flex items-center justify-between px-6 h-16">
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[22px] tracking-tight text-[#EEE8DC]">Abril 2025</h1>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="text-[#7A8BA8] active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="text-[#7A8BA8] active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<button class="bg-[#1B2A4A] text-[#EEE8DC] text-[13px] font-semibold px-[14px] py-[6px] rounded-full active:scale-95 duration-200">
+                Hoje
+            </button>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-md mx-auto">
+<!-- View Switcher -->
+<div class="mt-4 bg-[#111827] p-[3px] rounded-[10px] flex items-center h-[36px]">
+<button class="flex-1 bg-[#1B2A4A] text-[#EEE8DC] text-[13px] font-semibold rounded-[8px] h-full flex items-center justify-center">
+                Mês
+            </button>
+<button class="flex-1 text-[#7A8BA8] text-[13px] font-semibold h-full flex items-center justify-center">
+                Semana
+            </button>
+<button class="flex-1 text-[#7A8BA8] text-[13px] font-semibold h-full flex items-center justify-center">
+                Dia
+            </button>
+</div>
+<!-- Calendar Grid -->
+<div class="mt-8">
+<div class="grid grid-cols-7 mb-4">
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">DOM</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">SEG</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">TER</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">QUA</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">QUI</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">SEX</div>
+<div class="text-center text-[#3D506B] text-[11px] font-medium tracking-widest">SÁB</div>
+</div>
+<div class="grid grid-cols-7 gap-y-4">
+<!-- Row 1 -->
+<div class="h-10 flex flex-col items-center justify-center opacity-50 text-[#3D506B]">30</div>
+<div class="h-10 flex flex-col items-center justify-center opacity-50 text-[#3D506B]">31</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">1</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">2</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">
+                    3
+                    <span class="absolute bottom-0 w-1 h-1 bg-[#4C72C4] rounded-full"></span>
+</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">4</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">5</div>
+<!-- Row 2 -->
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">6</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">
+                    7
+                    <span class="absolute bottom-0 w-1 h-1 bg-[#4C72C4] rounded-full"></span>
+</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">8</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">9</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">10</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">11</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">12</div>
+<!-- Row 3 -->
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">13</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">14</div>
+<!-- Today -->
+<div class="h-10 flex flex-col items-center justify-center relative">
+<span class="w-8 h-8 bg-[#4C72C4] rounded-full flex items-center justify-center text-[#EEE8DC] font-bold">15</span>
+<span class="absolute bottom-0 w-1 h-1 bg-[#4C72C4] rounded-full"></span>
+</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">16</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">17</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">18</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">19</div>
+<!-- Row 4 -->
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">20</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">
+<span class="text-xs absolute -bottom-4 z-10 bg-[#1B2A4A] text-[#EEE8DC] px-2 py-0.5 rounded whitespace-nowrap overflow-hidden text-ellipsis max-w-[50px]">Culto Jovem</span>
+                    21
+                </div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">22</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">23</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">24</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">25</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">26</div>
+<!-- Row 5 -->
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">27</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">28</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">29</div>
+<div class="h-10 flex flex-col items-center justify-center text-[#EEE8DC] relative">30</div>
+<div class="h-10 flex flex-col items-center justify-center opacity-50 text-[#3D506B]">1</div>
+<div class="h-10 flex flex-col items-center justify-center opacity-50 text-[#3D506B]">2</div>
+<div class="h-10 flex flex-col items-center justify-center opacity-50 text-[#3D506B]">3</div>
+</div>
+</div>
+<!-- Selected Day List -->
+<section class="mt-16">
+<h2 class="text-[#EEE8DC] font-semibold text-sm mb-4">15 de Abril, Segunda</h2>
+<div class="space-y-4">
+<!-- Event Item -->
+<div class="bg-[#111827] rounded-[12px] p-[14px] border-l-[3px] border-[#4C72C4] shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-[#EEE8DC] font-bold text-[15px]">Culto Jovem</h3>
+<p class="text-[#7A8BA8] text-[13px] mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                19:00–21:00
+                            </p>
+<p class="text-[#7A8BA8] text-[13px] mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                Templo Principal
+                            </p>
+</div>
+<span class="bg-[#4C72C41A] text-[#4C72C4] text-[10px] uppercase font-bold px-2 py-0.5 rounded">Especial</span>
+</div>
+</div>
+<!-- Event Item 2 -->
+<div class="bg-[#111827] rounded-[12px] p-[14px] border-l-[3px] border-[#7A8BA8] shadow-md opacity-80">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-[#EEE8DC] font-bold text-[15px]">Reunião de Líderes</h3>
+<p class="text-[#7A8BA8] text-[13px] mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                18:00–18:45
+                            </p>
+<p class="text-[#7A8BA8] text-[13px] mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                Sala A
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Decorative Card (Bento Grid Style Inspiration) -->
+<div class="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1B2A4A] to-[#111827] p-6 border border-[#FFFFFF12]">
+<div class="relative z-10">
+<p class="text-[#4C72C4] text-[11px] font-bold uppercase tracking-wider">Próximo Destaque</p>
+<h4 class="text-white text-xl font-bold mt-2 leading-tight">Retiro Espiritual 2025</h4>
+<p class="text-[#7A8BA8] text-sm mt-2 max-w-[200px]">Prepare seu coração para um fim de semana de renovo.</p>
+<div class="mt-4 flex -space-x-2">
+<img alt="Participant portrait" class="w-8 h-8 rounded-full border-2 border-[#1B2A4A]" data-alt="portrait of a young smiling man in natural lighting for team profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDIpZuR1iKay70yB0YeFMmK9p1mXS1EuJIvJHTKF6ScYv06IDPKoH3_TW8Um4Yd9GsZBFAQ6zRKuMT_lXJqBWMIxDY0Nt8iSwn6l3B4Hu8B6nFZEgC1krFVXlbXiqkRWm3zYQtbdroeVSFUlcoaei4kUIc_6JEqhZvNQlsj_mOO0eZYbQIaBH2c3TyrgJcr0WTA0wQyKNJr1IIxzyHbVYSRkFj6B0Zd2uvoVjeegyKq7Idi-G2OJRzp5k6Mh_ga3E2S2hUBIcMLUg"/>
+<img alt="Participant portrait" class="w-8 h-8 rounded-full border-2 border-[#1B2A4A]" data-alt="portrait of a professional young woman with neutral soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdxXIYV_CkQQ6SWNYiIArPMq09jHU2jjDddjDP16sLo9at8zifjhJIe7hznoGOjMOxcR-6V8WQMQogCK_w9HsWZUaJAa5SbZJc1Hkrtz3b0olSn-lEnVkp_JxJUREs-NBapk9E3pH5wXe85RlNfLh5Q2GvlvBIKdvknZer-kQ-P1rEepJQs4nzDu2-lUSEhc7taCNNRPmtjOpvmogmV7Sqv2dubDwTKD4VJmnGA9yDyR3U4FDShrYheHKcNCcuyYRrhPBzkGca-WA"/>
+<img alt="Participant portrait" class="w-8 h-8 rounded-full border-2 border-[#1B2A4A]" data-alt="portrait of a young man with glasses and casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjhYD2X2Yx34-sOW0bFgJ65mg32cX0YL9llsfzroeJva2kxSbrExQoyqCh2MWbCMYUZMBkwxBR2VwODeYvNkjcC2Q1xR7X8UtVGqUt6pLi62YiGw-6THsxfKmj26bqA8BAaLXYa6fSm3rGBcj1kH8lx-yt3xpsytlmRZcrCnVEQSlaGh7xSbyRdpgHYg9pA44KSoEICEsLZ5aQk2BLHRL9LURpN70ks8MuW2shYYqdEUfOuNUmzbJjPkEj8Cmb6mTD54tgJHDIf7s"/>
+<div class="w-8 h-8 rounded-full bg-[#4C72C4] border-2 border-[#1B2A4A] flex items-center justify-center text-[10px] font-bold text-white">+42</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 opacity-20 -mr-8 -mt-8 bg-[#4C72C4] blur-3xl rounded-full"></div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-20 right-6 w-[56px] h-[56px] bg-[#4C72C4] text-[#EEE8DC] rounded-full shadow-[0_4px_24px_rgba(76,114,196,0.35)] flex items-center justify-center active:scale-90 duration-150 z-40">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-4 bg-[#111827] rounded-t-[18px] border-t border-[#FFFFFF12] shadow-md z-50">
+<div class="flex flex-col items-center justify-center text-[#7A8BA8] py-1 hover:text-[#EEE8DC] transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase mt-1">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4C72C4] bg-[#4C72C41A] rounded-[14px] py-1 px-4 hover:text-[#EEE8DC] transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase mt-1">Calendário</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7A8BA8] py-1 hover:text-[#EEE8DC] transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase mt-1">Líderes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7A8BA8] py-1 hover:text-[#EEE8DC] transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase mt-1">Perfil</span>
+</div>
+</nav>
+</body></html>

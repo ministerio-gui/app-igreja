@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-bg-base: #090D15;
+  --color-bg-surface: #111827;
+  --color-bg-elevated: #1B2A4A;
+  --color-bg-overlay: #243358;
+  --color-bg-subtle: #0F1A2E;
+
+  /* Accent */
+  --color-accent-primary: #4C72C4;
+  --color-accent-subtle: rgba(76, 114, 196, 0.1);
+
+  /* Text */
+  --color-text-primary: #EEE8DC;
+  --color-text-secondary: #7A8BA8;
+  --color-text-muted: #3D506B;
+  --color-cream: #EEE8DC;
+
+  /* Status */
+  --color-success: #22D3A0;
+  --color-warning: #F5A623;
+  --color-danger: #F05252;
+  --color-info: #4C72C4;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing base 4px */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+
+  /* Border radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+}
+
+/* Light theme overrides */
+.light {
+  --color-bg-base: #F5F5F0;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #EEE8DC;
+  --color-bg-overlay: #E5DFD3;
+  --color-bg-subtle: #F9F7F4;
+  --color-text-primary: #1B2A4A;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #9AA5B4;
+  --color-cream: #1B2A4A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-bg-overlay); border-radius: 9999px; }
+
+/* Touch scrolling */
+.scroll-touch { -webkit-overflow-scrolling: touch; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

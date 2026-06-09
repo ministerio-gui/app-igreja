@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nova Venda | Líderes AD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#2c3039",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "on-primary-fixed": "#001945",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface-variant": "#c3c6d3",
+                        "on-background": "#dfe2ee",
+                        "on-tertiary": "#333028",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#384668",
+                        "inverse-primary": "#335bac",
+                        "surface-container-high": "#262a33",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary-fixed": "#0a1a3a",
+                        "on-primary-fixed-variant": "#134393",
+                        "tertiary": "#cbc6bb",
+                        "outline-variant": "#434651",
+                        "surface-container": "#1c2028",
+                        "on-surface": "#dfe2ee",
+                        "surface-container-highest": "#31353e",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "tertiary-fixed": "#e8e2d6",
+                        "secondary-container": "#384668",
+                        "surface-container-low": "#181c24",
+                        "on-primary-container": "#fefbff",
+                        "on-primary": "#002d6e",
+                        "surface-bright": "#353942",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#31353e",
+                        "on-secondary": "#213050",
+                        "background": "#0f131c",
+                        "inverse-surface": "#dfe2ee",
+                        "surface": "#0f131c",
+                        "surface-container-lowest": "#0a0e16",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "primary": "#b0c6ff",
+                        "secondary-fixed-dim": "#b7c6ee",
+                        "secondary": "#b7c6ee",
+                        "secondary-fixed": "#d9e2ff",
+                        "outline": "#8d909d",
+                        "on-secondary-container": "#a6b5dc",
+                        "on-error": "#690005",
+                        "surface-dim": "#0f131c",
+                        "primary-container": "#4c72c4",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#090D15] font-body text-on-surface antialiased overflow-hidden">
+<!-- Background Content Mock (Dashboard) -->
+<div class="fixed inset-0 z-0 p-4 pt-20">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[#7A8BA8] text-sm">Bem-vindo,</p>
+<h2 class="text-[#EEE8DC] font-bold text-xl">Líder Gabriel</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-[#1B2A4A] flex items-center justify-center border border-[#FFFFFF07]">
+<span class="material-symbols-outlined text-[#EEE8DC]">person</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-[#111827] p-4 rounded-xl border border-[#FFFFFF07]">
+<p class="text-[#7A8BA8] text-[11px] uppercase tracking-wider mb-1">Vendas Hoje</p>
+<p class="text-[#EEE8DC] font-bold text-lg">R$ 145,00</p>
+</div>
+<div class="bg-[#111827] p-4 rounded-xl border border-[#FFFFFF07]">
+<p class="text-[#7A8BA8] text-[11px] uppercase tracking-wider mb-1">Metas</p>
+<p class="text-[#EEE8DC] font-bold text-lg">62%</p>
+</div>
+</div>
+<div class="mt-6 bg-[#1B2A4A] p-6 rounded-xl border border-[#4C72C430] relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-[#EEE8DC] font-bold mb-2">Ranking de Líderes</h3>
+<p class="text-[#7A8BA8] text-sm">Você está em 4º lugar na sua região.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Overlay / Dimmer -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300"></div>
+<!-- Bottom Sheet Modal -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-[#111827] rounded-t-[24px] h-[636px] flex flex-col shadow-2xl transition-transform duration-500 ease-out translate-y-0">
+<!-- Drag Handle -->
+<div class="flex justify-center pt-3 pb-2">
+<div class="w-9 h-1 rounded-full bg-[#3D506B]/40"></div>
+</div>
+<!-- Header -->
+<header class="flex justify-between items-center px-5 py-2">
+<h1 class="text-[#EEE8DC] font-bold text-[20px] font-headline">Nova Venda</h1>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#FFFFFF07] transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[#7A8BA8]">close</span>
+</button>
+</header>
+<!-- Modal Content -->
+<div class="flex-1 overflow-y-auto px-5 py-4 space-y-8 hide-scrollbar">
+<!-- Product Selector -->
+<section class="space-y-3">
+<label class="text-[#7A8BA8] text-[11px] font-semibold uppercase tracking-[0.1em]">Produto</label>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-5 px-5">
+<!-- Selected Card -->
+<div class="flex-shrink-0 w-20 h-[88px] rounded-[12px] bg-[#1B2A4A] border-2 border-[#4C72C4] flex flex-col items-center justify-center space-y-1 transition-all duration-200">
+<span class="text-xl">🥤</span>
+<span class="text-[#EEE8DC] text-[12px] font-medium leading-none">Suco</span>
+<span class="text-[#4C72C4] text-[13px] font-semibold font-mono">R$ 5</span>
+</div>
+<!-- Regular Card -->
+<div class="flex-shrink-0 w-20 h-[88px] rounded-[12px] bg-[#0F1A2E] border border-[#FFFFFF0F] flex flex-col items-center justify-center space-y-1 hover:border-[#4C72C430] transition-all duration-200">
+<span class="text-xl">🍫</span>
+<span class="text-[#EEE8DC] text-[12px] font-medium leading-none">Choc.</span>
+<span class="text-[#4C72C4] text-[13px] font-semibold font-mono">R$ 3</span>
+</div>
+<!-- Regular Card -->
+<div class="flex-shrink-0 w-20 h-[88px] rounded-[12px] bg-[#0F1A2E] border border-[#FFFFFF0F] flex flex-col items-center justify-center space-y-1 hover:border-[#4C72C430] transition-all duration-200">
+<span class="text-xl">☕</span>
+<span class="text-[#EEE8DC] text-[12px] font-medium leading-none">Café</span>
+<span class="text-[#4C72C4] text-[13px] font-semibold font-mono">R$ 4</span>
+</div>
+<!-- Regular Card -->
+<div class="flex-shrink-0 w-20 h-[88px] rounded-[12px] bg-[#0F1A2E] border border-[#FFFFFF0F] flex flex-col items-center justify-center space-y-1 hover:border-[#4C72C430] transition-all duration-200">
+<span class="text-xl">🍬</span>
+<span class="text-[#EEE8DC] text-[12px] font-medium leading-none">Bala</span>
+<span class="text-[#4C72C4] text-[13px] font-semibold font-mono">R$ 1</span>
+</div>
+<!-- Regular Card -->
+<div class="flex-shrink-0 w-20 h-[88px] rounded-[12px] bg-[#0F1A2E] border border-[#FFFFFF0F] flex flex-col items-center justify-center space-y-1 hover:border-[#4C72C430] transition-all duration-200">
+<span class="text-xl">🍪</span>
+<span class="text-[#EEE8DC] text-[12px] font-medium leading-none">Cookie</span>
+<span class="text-[#4C72C4] text-[13px] font-semibold font-mono">R$ 6</span>
+</div>
+</div>
+</section>
+<!-- Quantity Stepper -->
+<section class="space-y-4">
+<label class="text-[#7A8BA8] text-[11px] font-semibold uppercase tracking-wider">Quantidade</label>
+<div class="flex items-center justify-between bg-[#0F1A2E] rounded-2xl p-2 max-w-[200px]">
+<button class="w-11 h-11 flex items-center justify-center rounded-full bg-[#1B2A4A] text-[#EEE8DC] shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="text-[#EEE8DC] font-bold text-2xl font-headline">2</span>
+<button class="w-11 h-11 flex items-center justify-center rounded-full bg-[#4C72C4] text-[#EEE8DC] shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</section>
+<!-- Summary Card -->
+<section class="bg-[#0F1A2E] rounded-[12px] p-4 border border-[#FFFFFF07]">
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-[#7A8BA8] text-sm">Subtotal</span>
+<span class="text-[#EEE8DC] font-mono text-sm">R$ 10,00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[#7A8BA8] text-sm">Igreja (10%)</span>
+<span class="text-[#22D3A0] font-mono text-sm font-semibold">+ R$ 1,00</span>
+</div>
+<div class="h-px w-full bg-[#FFFFFF0F] my-1"></div>
+<div class="flex justify-between items-end pt-1">
+<span class="text-[#EEE8DC] font-bold">Total</span>
+<span class="text-[#EEE8DC] font-bold text-[18px] font-mono tracking-tight">R$ 11,00</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Actions -->
+<footer class="p-5 space-y-4 bg-[#111827]">
+<button class="w-full h-[52px] bg-[#4C72C4] text-[#EEE8DC] font-bold rounded-[10px] shadow-lg active:scale-[0.98] transition-all duration-200">
+                Registrar Venda
+            </button>
+<button class="w-full text-[#7A8BA8] font-semibold text-sm hover:text-[#EEE8DC] transition-colors pb-2">
+                Cancelar
+            </button>
+</footer>
+</div>
+<!-- Background Navigation Shell -->
+<nav class="fixed bottom-0 w-full max-w-md mx-auto h-16 bg-[#111827] border-t border-[#FFFFFF07] flex justify-around items-center z-10">
+<div class="flex flex-col items-center justify-center text-[#4C72C4] font-bold bg-[#4C72C41A] rounded-xl px-3 py-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase tracking-wider">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7A8BA8]">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase tracking-wider">Vendas</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7A8BA8]">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase tracking-wider">Líderes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7A8BA8]">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px] uppercase tracking-wider">Perfil</span>
+</div>
+</nav>
+<!-- Top Bar Mock -->
+<header class="fixed top-0 w-full h-16 bg-[#090D15] border-b border-[#FFFFFF07] flex justify-between items-center px-4 z-10">
+<span class="text-[#EEE8DC] font-extrabold text-xl font-headline tracking-tight">Líderes AD</span>
+<button class="text-[#4C72C4] w-10 h-10 flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+</body></html>
