@@ -1,0 +1,8 @@
+# Claude Code — configurações locais com tokens/segredos
+.claude/mcp.json
+.claude/settings.local.json
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
