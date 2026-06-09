@@ -53,6 +53,8 @@ export function useEvents() {
   return {
     ...query,
     create: createMutation.mutate,
+    createAsync: createMutation.mutateAsync,
+    isCreating: createMutation.isPending,
     update: updateMutation.mutate,
     remove: deleteMutation.mutate,
   }

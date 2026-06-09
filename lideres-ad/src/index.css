@@ -97,6 +97,58 @@ body {
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
+/* ── Mobile background com profundidade ── */
+.mobile-bg {
+  background: var(--color-bg-base);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(76,114,196,0.12) 0%, transparent 70%);
+}
+
+/* ── Glassmorphism layers ── */
+.glass-1 {
+  background: rgba(27, 42, 74, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.glass-2 {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.glass-accent {
+  background: linear-gradient(135deg, rgba(27,42,74,0.8) 0%, rgba(15,26,46,0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(76, 114, 196, 0.2);
+  box-shadow: 0 4px 24px rgba(76,114,196,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.depth-accent {
+  background: var(--color-bg-elevated);
+  box-shadow: 0 4px 24px rgba(76,114,196,0.25), 0 1px 3px rgba(0,0,0,0.5);
+}
+
+@layer utilities {
+  .text-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+  .text-display {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .text-mono {
+    font-family: var(--font-mono);
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

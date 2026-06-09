@@ -6,6 +6,8 @@
 import { Outlet } from 'react-router-dom'
 import { BottomNav } from './BottomNav'
 import { Sidebar } from './Sidebar'
+import { EventModal } from '@/components/modals/EventModal'
+import { NoteModal } from '@/components/modals/NoteModal'
 
 export function AppShell() {
   return (
@@ -26,6 +28,10 @@ export function AppShell() {
       <div className="lg:hidden">
         <BottomNav />
       </div>
+
+      {/* Modais globais — acessíveis de qualquer tela */}
+      <EventModal />
+      <NoteModal />
     </div>
   )
 }

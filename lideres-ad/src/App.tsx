@@ -2,6 +2,7 @@
  * App — router setup with protected routes
  */
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Toaster } from 'sonner'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useEffect } from 'react'
 import { useThemeStore } from '@/store/themeStore'
@@ -35,6 +36,17 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <ThemeInitializer />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              background: 'rgba(27,42,74,0.95)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              color: '#EEE8DC',
+              backdropFilter: 'blur(20px)',
+            },
+          }}
+        />
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route

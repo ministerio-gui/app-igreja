@@ -12,11 +12,13 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.108.0",
     "@tanstack/react-query": "^5.101.0",
+    "date-fns": "^4.4.0",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.17.0",
+    "sonner": "^2.0.7",
     "zustand": "^5.0.14"
   },
   "devDependencies": {
