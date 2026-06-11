@@ -37,6 +37,7 @@ export interface Note {
   author_id: string
   created_at: string
   updated_at: string
+  author?: { full_name: string | null; avatar_url: string | null }
 }
 
 export type TransactionType = 'sale' | 'expense' | 'deposit' | 'adjustment'

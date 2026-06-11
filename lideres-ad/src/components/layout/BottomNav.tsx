@@ -124,15 +124,15 @@ function SpeedDialButton({ item, onPress }: SpeedDialButtonProps) {
 
       {/* Label */}
       <span
+        className="speed-dial-label"
         style={{
           fontSize: '13px',
           fontWeight: 600,
           color: 'var(--color-text-primary)',
-          background: 'rgba(9,13,21,0.85)',
           backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
           padding: '5px 10px',
           borderRadius: '8px',
-          border: '1px solid rgba(255,255,255,0.08)',
           whiteSpace: 'nowrap',
         }}
       >

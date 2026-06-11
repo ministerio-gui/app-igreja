@@ -62,7 +62,7 @@ export function CantinaBalanceCard() {
             fontFamily: 'var(--font-mono)',
             fontSize: '42px',
             fontWeight: 700,
-            color: '#EEE8DC',
+            color: 'var(--color-text-primary)',
             letterSpacing: '-0.02em',
           }}
         >
@@ -84,7 +84,7 @@ export function CantinaBalanceCard() {
             whileTap={{ scale: 0.94 }}
             onClick={() => navigate('/cantina')}
             className="flex-1 h-9 rounded-full glass-1 text-[13px] font-medium"
-            style={{ color: '#EEE8DC' }}
+            style={{ color: 'var(--color-text-primary)' }}
           >
             ＋ Venda
           </motion.button>

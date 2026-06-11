@@ -7,19 +7,13 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Bell, Moon, Sun } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import { useThemeStore } from '@/store/themeStore'
+import { getInitials } from '@/lib/utils'
 
 function getGreeting(): string {
   const h = new Date().getHours()
   if (h < 12) return 'Bom dia'
   if (h < 18) return 'Boa tarde'
   return 'Boa noite'
-}
-
-function getInitials(fullName: string | null): string {
-  if (!fullName) return '?'
-  const parts = fullName.trim().split(' ')
-  if (parts.length === 1) return parts[0][0].toUpperCase()
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
 }
 
 export function HomeHeader() {
@@ -29,10 +23,17 @@ export function HomeHeader() {
   const firstName = profile?.full_name?.split(' ')[0] ?? ''
   const initials = getInitials(profile?.full_name ?? null)
 
+  const isLight = theme === 'light'
   const { scrollY } = useScroll()
-  const headerBg    = useTransform(scrollY, [0, 60], ['rgba(9,13,21,0)', 'rgba(9,13,21,0.92)'])
+  const headerBg    = useTransform(
+    scrollY, [0, 60],
+    isLight ? ['rgba(255,255,255,0)', 'rgba(255,255,255,0.92)'] : ['rgba(9,13,21,0)', 'rgba(9,13,21,0.92)']
+  )
   const headerBlur  = useTransform(scrollY, [0, 60], [0, 20])
-  const borderColor = useTransform(scrollY, [40, 80], ['rgba(255,255,255,0)', 'rgba(255,255,255,0.08)'])
+  const borderColor = useTransform(
+    scrollY, [40, 80],
+    isLight ? ['rgba(27,42,74,0)', 'rgba(27,42,74,0.08)'] : ['rgba(255,255,255,0)', 'rgba(255,255,255,0.08)']
+  )
 
   return (
     <motion.header
@@ -48,10 +49,10 @@ export function HomeHeader() {
         <div
           className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
           style={{
-            backgroundColor: '#1B2A4A',
+            backgroundColor: 'var(--color-bg-elevated)',
             fontSize: '13px',
             fontWeight: 700,
-            color: '#EEE8DC',
+            color: 'var(--color-text-primary)',
           }}
         >
           {initials}
@@ -60,7 +61,7 @@ export function HomeHeader() {
           <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', lineHeight: 1 }}>
             {getGreeting()}
           </p>
-          <p style={{ fontSize: '16px', fontWeight: 700, color: '#EEE8DC', lineHeight: 1.2 }}>
+          <p style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.2 }}>
             {firstName} 👋
           </p>
         </div>

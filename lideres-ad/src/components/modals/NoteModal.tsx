@@ -8,8 +8,8 @@ import { useAuth } from '@/hooks/useAuth'
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--color-bg-subtle)',
+  border: '1px solid var(--color-bg-overlay)',
   borderRadius: '10px',
   padding: '10px 12px',
   fontSize: '15px',
@@ -109,7 +109,7 @@ export function NoteModal() {
                   width: '40px',
                   height: '24px',
                   borderRadius: '12px',
-                  background: isGlobal ? '#22D3A0' : 'rgba(255,255,255,0.12)',
+                  background: isGlobal ? '#22D3A0' : 'rgba(76,114,196,0.15)',
                   border: 'none',
                   cursor: 'pointer',
                   position: 'relative',

@@ -17,7 +17,7 @@ export function useNotes() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('notes')
-        .select('*')
+        .select('*, author:profiles(full_name, avatar_url)')
         .order('pinned', { ascending: false })
         .order('created_at', { ascending: false })
         .limit(4)

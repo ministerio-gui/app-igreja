@@ -8,6 +8,8 @@ import { Pin } from 'lucide-react'
 import { useNotes } from '@/hooks/useNotes'
 import { NoteCardSkeleton } from '@/components/ui/Skeleton'
 import { staggerContainerFast, cardVariants } from '@/lib/animations'
+import { getInitials } from '@/lib/utils'
+import { formatRelativeShort } from '@/lib/formatters'
 import type { Note } from '@/types'
 
 // ─── Note card ────────────────────────────────────────────────────────────────
@@ -19,7 +21,7 @@ function NoteCard({ note }: { note: Note }) {
       className="glass-1 rounded-[14px] relative cursor-pointer"
       style={{
         padding: '14px',
-        minHeight: '100px',
+        minHeight: '112px',
         border: note.is_global ? '1px solid rgba(34,211,160,0.2)' : undefined,
       }}
     >
@@ -52,7 +54,7 @@ function NoteCard({ note }: { note: Note }) {
       {note.title && (
         <p
           className="mb-1 truncate"
-          style={{ fontSize: '14px', fontWeight: 600, color: '#EEE8DC' }}
+          style={{ fontSize: '14px', fontWeight: 600, color: 'var(--color-text-primary)' }}
         >
           {note.title}
         </p>
@@ -73,6 +75,30 @@ function NoteCard({ note }: { note: Note }) {
           {note.content}
         </p>
       )}
+
+      {/* Autor + data */}
+      <div
+        className="flex items-center gap-1.5 mt-2 pt-2"
+        style={{ borderTop: '1px solid var(--color-bg-overlay)' }}
+      >
+        <div
+          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+          style={{
+            backgroundColor: 'var(--color-bg-elevated)',
+            fontSize: '9px',
+            fontWeight: 700,
+            color: 'var(--color-text-primary)',
+          }}
+        >
+          {getInitials(note.author?.full_name ?? null)}
+        </div>
+        <span
+          className="truncate"
+          style={{ fontSize: '11px', color: 'var(--color-text-muted)' }}
+        >
+          {formatRelativeShort(note.created_at)}
+        </span>
+      </div>
     </motion.div>
   )
 }

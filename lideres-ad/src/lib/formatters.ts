@@ -1,6 +1,8 @@
 /**
  * formatters — currency, date, and number display helpers
  */
+import { formatDistanceToNow, isToday, isYesterday } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 
 export function formatCurrency(value: number): string {
   return new Intl.NumberFormat('pt-BR', {
@@ -30,4 +32,11 @@ export function formatTime(date: string | Date): string {
     hour: '2-digit',
     minute: '2-digit',
   }).format(new Date(date))
+}
+
+export function formatRelativeShort(date: string | Date): string {
+  const d = new Date(date)
+  if (isToday(d)) return 'Hoje'
+  if (isYesterday(d)) return 'Ontem'
+  return formatDistanceToNow(d, { locale: ptBR, addSuffix: true })
 }

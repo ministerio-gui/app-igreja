@@ -7,6 +7,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAbsences } from '@/hooks/useAbsences'
 import { staggerContainer, cardVariants } from '@/lib/animations'
+import { getInitials } from '@/lib/utils'
 
 function getWeekRange(): { start: Date; end: Date } {
   const now = new Date()
@@ -18,13 +19,6 @@ function getWeekRange(): { start: Date; end: Date } {
   end.setDate(start.getDate() + 6)
   end.setHours(23, 59, 59, 999)
   return { start, end }
-}
-
-function getInitials(fullName: string | null): string {
-  if (!fullName) return '?'
-  const parts = fullName.trim().split(' ')
-  if (parts.length === 1) return parts[0][0].toUpperCase()
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
 }
 
 const MAX_VISIBLE = 5
@@ -95,7 +89,7 @@ export function WeekAbsences() {
           >
             <div
               className="w-11 h-11 rounded-full glass-1 flex items-center justify-center"
-              style={{ fontSize: '14px', fontWeight: 600, color: '#EEE8DC' }}
+              style={{ fontSize: '14px', fontWeight: 600, color: 'var(--color-text-primary)' }}
             >
               {getInitials(absence.member?.full_name ?? null)}
             </div>

@@ -58,7 +58,7 @@
   --color-bg-subtle: #F9F7F4;
   --color-text-primary: #1B2A4A;
   --color-text-secondary: #4A5568;
-  --color-text-muted: #9AA5B4;
+  --color-text-muted: #6B7790;
   --color-cream: #1B2A4A;
 }
 
@@ -129,6 +129,41 @@ body {
 .depth-accent {
   background: var(--color-bg-elevated);
   box-shadow: 0 4px 24px rgba(76,114,196,0.25), 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Speed-dial label (BottomNav FAB) */
+.speed-dial-label {
+  background: rgba(9,13,21,0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Light theme overrides for glassmorphism ── */
+.light .mobile-bg {
+  background: var(--color-bg-base);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(76,114,196,0.06) 0%, transparent 70%);
+}
+.light .glass-1 {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  box-shadow: 0 4px 16px rgba(27, 42, 74, 0.08);
+}
+.light .glass-2 {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(27, 42, 74, 0.10);
+  box-shadow: 0 8px 32px rgba(27, 42, 74, 0.12);
+}
+.light .glass-accent {
+  background: linear-gradient(135deg, rgba(238,232,220,0.9) 0%, rgba(255,255,255,0.95) 100%);
+  border: 1px solid rgba(76, 114, 196, 0.18);
+  box-shadow: 0 4px 24px rgba(76,114,196,0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.light .depth-accent {
+  box-shadow: 0 4px 24px rgba(76,114,196,0.15), 0 1px 3px rgba(27,42,74,0.12);
+}
+.light .speed-dial-label {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(27,42,74,0.10);
 }
 
 @layer utilities {

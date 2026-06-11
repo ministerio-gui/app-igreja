@@ -62,7 +62,7 @@ export function HomeHero() {
             </p>
             <p
               className="leading-tight"
-              style={{ fontSize: '17px', fontWeight: 600, color: '#EEE8DC' }}
+              style={{ fontSize: '17px', fontWeight: 600, color: 'var(--color-text-primary)' }}
             >
               {nextEvent.title}
             </p>

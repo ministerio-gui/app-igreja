@@ -5,6 +5,7 @@ import { AdaptiveModal } from '@/components/ui/AdaptiveModal'
 import { useUIStore } from '@/store/uiStore'
 import { useEvents } from '@/hooks/useEvents'
 import { useAuth } from '@/hooks/useAuth'
+import { useThemeStore } from '@/store/themeStore'
 
 const COLOR_SWATCHES = [
   { value: '#4C72C4', label: 'Azul' },
@@ -17,8 +18,8 @@ const COLOR_SWATCHES = [
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'var(--color-bg-subtle)',
+  border: '1px solid var(--color-bg-overlay)',
   borderRadius: '10px',
   padding: '10px 12px',
   fontSize: '15px',
@@ -40,6 +41,8 @@ export function EventModal() {
   const { eventModalOpen, closeEventModal } = useUIStore()
   const { createAsync, isCreating } = useEvents()
   const { user } = useAuth()
+  const { theme } = useThemeStore()
+  const colorScheme = theme === 'light' ? 'light' : 'dark'
 
   const today = new Date().toISOString().split('T')[0]
 
@@ -123,7 +126,7 @@ export function EventModal() {
             <label style={labelStyle}>Data *</label>
             <input
               type="date"
-              style={{ ...inputStyle, colorScheme: 'dark' }}
+              style={{ ...inputStyle, colorScheme }}
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
@@ -138,7 +141,7 @@ export function EventModal() {
                 width: '40px',
                 height: '24px',
                 borderRadius: '12px',
-                background: allDay ? 'var(--color-accent-primary)' : 'rgba(255,255,255,0.12)',
+                background: allDay ? 'var(--color-accent-primary)' : 'rgba(76,114,196,0.15)',
                 border: 'none',
                 cursor: 'pointer',
                 position: 'relative',
@@ -171,7 +174,7 @@ export function EventModal() {
                 <label style={labelStyle}>Início</label>
                 <input
                   type="time"
-                  style={{ ...inputStyle, colorScheme: 'dark' }}
+                  style={{ ...inputStyle, colorScheme }}
                   value={startTime}
                   onChange={(e) => setStartTime(e.target.value)}
                 />
@@ -180,7 +183,7 @@ export function EventModal() {
                 <label style={labelStyle}>Fim</label>
                 <input
                   type="time"
-                  style={{ ...inputStyle, colorScheme: 'dark' }}
+                  style={{ ...inputStyle, colorScheme }}
                   value={endTime}
                   onChange={(e) => setEndTime(e.target.value)}
                 />

@@ -26,14 +26,14 @@ function EventCard({ event }: { event: Event }) {
       {/* Date badge */}
       <div
         className="flex flex-col items-center justify-center w-12 h-12 rounded-2xl flex-shrink-0"
-        style={{ backgroundColor: '#1B2A4A' }}
+        style={{ backgroundColor: 'var(--color-bg-elevated)' }}
       >
         <span
           style={{ fontSize: '10px', color: 'var(--color-text-secondary)', textTransform: 'uppercase', fontWeight: 500 }}
         >
           {format(startDate, 'MMM', { locale: ptBR })}
         </span>
-        <span style={{ fontSize: '20px', fontWeight: 700, color: '#EEE8DC', lineHeight: 1 }}>
+        <span style={{ fontSize: '20px', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1 }}>
           {format(startDate, 'dd')}
         </span>
       </div>
@@ -42,7 +42,7 @@ function EventCard({ event }: { event: Event }) {
       <div className="flex-1 min-w-0">
         <p
           className="truncate"
-          style={{ fontSize: '15px', fontWeight: 600, color: '#EEE8DC' }}
+          style={{ fontSize: '15px', fontWeight: 600, color: 'var(--color-text-primary)' }}
         >
           {event.title}
         </p>
